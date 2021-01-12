@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demo/base/container_page/container_page.dart';
 
 class BaseWidgetPage extends StatelessWidget {
   @override
@@ -18,13 +19,35 @@ class BaseWidget extends StatefulWidget {
 }
 
 class _BaseWidgetState extends State<BaseWidget> {
+
+  List<String> _data = ['布局'];
+  List<Widget> _list = [ContainerPage()];
+  Widget _itemBuilder(BuildContext context, int index){
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          return _list[index];
+        }));
+
+      },
+      child: Container(
+        child: Card(
+          color: Colors.white,
+          child: Center(
+            child: Text(_data[index],style:TextStyle(color: Colors.black,fontSize:18)),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ListView(
-        children: <Widget>[
-          _ListItem(title: "布局"),
-        ],
+      child: ListView.builder(
+          itemExtent: 50.0, //强制高度为50.0
+          itemCount: _data.length,
+          itemBuilder: _itemBuilder
       ),
     );
   }
@@ -40,6 +63,7 @@ class _ListItem extends StatelessWidget {
     return Card(
       child: Container(
         height: 45,
+        color: Colors.white,
         alignment: Alignment.center,
         child: Text('$title'),
       ),

@@ -30,7 +30,7 @@ class _RootPageState extends State<RootPage> {
     BottomNavigationBarItem(title: Text('约束布局'),icon: Icon(Icons.book))];
 
   final PageController _controller = PageController(initialPage: 0);
-  List<Widget> _pages = [BaseWidgetPage()];
+  List<Widget> _pages = [BaseWidgetPage(),BaseWidgetPage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
