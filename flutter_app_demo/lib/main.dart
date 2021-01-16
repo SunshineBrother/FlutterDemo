@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_demo/base/base_widgetPage.dart';
+import 'package:flutter_app_demo/base/base_widget_page.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {

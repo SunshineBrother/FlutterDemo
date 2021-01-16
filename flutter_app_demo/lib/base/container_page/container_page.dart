@@ -23,7 +23,6 @@ class _ContainerPageState extends State<ContainerPage> {
   Widget _itemBuilder(BuildContext context, int index){
     return GestureDetector(
       onTap: () {
-
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
           return _list[index];
         }));
