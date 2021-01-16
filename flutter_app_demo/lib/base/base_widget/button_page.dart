@@ -3,7 +3,7 @@ class ButtonPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('TextField'),),
+      appBar: AppBar(title: Text('Button'),),
       body: Container(
         child: Center(child: ButtonWidget()),
       ),
