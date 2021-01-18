@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/base/base_widget/button_page.dart';
+import 'package:flutter_app_demo/base/base_widget/chip_page.dart';
+import 'package:flutter_app_demo/base/base_widget/radio_page.dart';
 import 'package:flutter_app_demo/base/base_widget/shape_page.dart';
 import 'package:flutter_app_demo/base/base_widget/text_page.dart';
 import 'package:flutter_app_demo/base/base_widget/textfield_page.dart';
@@ -21,8 +23,8 @@ class MyWdigetPage extends StatefulWidget {
 
 class _MyWdigetPageState extends State<MyWdigetPage> {
 
-  List<String> _data = ['文本组件Text','输入组件TextField','按钮组件Button','边框组件'];
-  List<Widget> _list = [MyTextPage(),TextFieldPage(),ButtonPage(),ShapePage()];
+  List<String> _data = ['文本组件Text','输入组件TextField','按钮组件Button','单选按钮Radio','边框组件','标签'];
+  List<Widget> _list = [MyTextPage(),TextFieldPage(),ButtonPage(),RadioPage(),ShapePage(),ChipPage()];
   Widget _itemBuilder(BuildContext context, int index){
     return GestureDetector(
       onTap: () {
