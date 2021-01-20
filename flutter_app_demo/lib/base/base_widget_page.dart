@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/base/base_widget/widget_page.dart';
 import 'package:flutter_app_demo/base/container_page/container_page.dart';
+import 'package:flutter_app_demo/base/event/event_page.dart';
 
 class BaseWidgetPage extends StatelessWidget {
   @override
@@ -21,8 +22,8 @@ class BaseWidget extends StatefulWidget {
 
 class _BaseWidgetState extends State<BaseWidget> {
 
-  List<String> _data = ['基础组件','布局组件'];
-  List<Widget> _list = [WidgetPage(),ContainerPage()];
+  List<String> _data = ['基础组件','布局组件','交互事件'];
+  List<Widget> _list = [WidgetPage(),ContainerPage(),EventPage()];
   Widget _itemBuilder(BuildContext context, int index){
     return GestureDetector(
       onTap: () {

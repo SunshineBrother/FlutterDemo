@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/base/base_widget/button_page.dart';
 import 'package:flutter_app_demo/base/base_widget/chip_page.dart';
+import 'package:flutter_app_demo/base/base_widget/progressIndicator_page.dart';
 import 'package:flutter_app_demo/base/base_widget/radio_page.dart';
 import 'package:flutter_app_demo/base/base_widget/shape_page.dart';
 import 'package:flutter_app_demo/base/base_widget/slider_page.dart';
@@ -25,8 +26,26 @@ class MyWdigetPage extends StatefulWidget {
 
 class _MyWdigetPageState extends State<MyWdigetPage> {
 
-  List<String> _data = ['文本组件Text','输入组件TextField','按钮组件Button','单选按钮Radio','滑块组件Slider','开关组件','边框组件','标签'];
-  List<Widget> _list = [MyTextPage(),TextFieldPage(),ButtonPage(),RadioPage(),SliderPage(),SwitchPage(),ShapePage(),ChipPage()];
+  List<String> _data = ['文本组件Text',
+    '输入组件TextField',
+    '按钮组件Button',
+    '单选按钮Radio',
+    '滑块组件Slider',
+    '开关组件',
+    '进度条组件',
+    '边框组件',
+    '标签'];
+  List<Widget> _list = [
+    MyTextPage(),
+    TextFieldPage(),
+    ButtonPage(),
+    RadioPage(),
+    SliderPage(),
+    SwitchPage(),
+    ProgressIndicatorPage(),
+    ShapePage(),
+    ChipPage()];
+
   Widget _itemBuilder(BuildContext context, int index){
     return GestureDetector(
       onTap: () {
