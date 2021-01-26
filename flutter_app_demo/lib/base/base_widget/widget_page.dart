@@ -6,6 +6,7 @@ import 'package:flutter_app_demo/base/base_widget/radio_page.dart';
 import 'package:flutter_app_demo/base/base_widget/shape_page.dart';
 import 'package:flutter_app_demo/base/base_widget/slider_page.dart';
 import 'package:flutter_app_demo/base/base_widget/switch_page.dart';
+import 'package:flutter_app_demo/base/base_widget/tabbar_widget.dart';
 import 'package:flutter_app_demo/base/base_widget/text_page.dart';
 import 'package:flutter_app_demo/base/base_widget/textfield_page.dart';
 class WidgetPage extends StatelessWidget {
@@ -26,7 +27,8 @@ class MyWdigetPage extends StatefulWidget {
 
 class _MyWdigetPageState extends State<MyWdigetPage> {
 
-  List<String> _data = ['文本组件Text',
+  List<String> _data = [
+    '文本组件Text',
     '输入组件TextField',
     '按钮组件Button',
     '单选按钮Radio',
@@ -34,7 +36,9 @@ class _MyWdigetPageState extends State<MyWdigetPage> {
     '开关组件',
     '进度条组件',
     '边框组件',
-    '标签'];
+    '标签',
+    'TabBar组件'
+  ];
   List<Widget> _list = [
     MyTextPage(),
     TextFieldPage(),
@@ -44,7 +48,9 @@ class _MyWdigetPageState extends State<MyWdigetPage> {
     SwitchPage(),
     ProgressIndicatorPage(),
     ShapePage(),
-    ChipPage()];
+    ChipPage(),
+    TabBarPage()
+  ];
 
   Widget _itemBuilder(BuildContext context, int index){
     return GestureDetector(
