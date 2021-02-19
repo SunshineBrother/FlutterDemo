@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/base/base_widget_page.dart';
+import 'package:flutter_app_demo/base/route/two_page.dart';
+
+import 'base/route/unknown_page.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -14,6 +17,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.yellow,
       ),
       home: RootPage(),
+      // 注册路由
+      routes: {
+        "two_page":(context)=>TwoPage(),
+      },
+      // 错误路由处理，统一返回 UnknownPage
+      onUnknownRoute: (RouteSettings setting) => MaterialPageRoute(builder: (context) => UnknownPage()),
     );
   }
 }
