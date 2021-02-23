@@ -5,6 +5,7 @@ import 'package:flutter_app_demo/base/event/event_page.dart';
 import 'package:flutter_app_demo/base/route/one_page.dart';
 import 'package:flutter_app_demo/base/scrollable_widget/scrollable_widget.dart';
 import 'package:flutter_app_demo/base/value/value_page.dart';
+import 'package:flutter_app_demo/base/widget_life_cycle/life_cycle_page.dart';
 
 class BaseWidgetPage extends StatelessWidget {
   @override
@@ -31,7 +32,8 @@ class _BaseWidgetState extends State<BaseWidget> {
     '交互事件',
     '滚动组件',
     '路由与导航',
-    '跨组件传递数据'
+    '跨组件传递数据',
+    'Widget生命周期&渲染原理'
   ];
   List<Widget> _list = [
     WidgetPage(),
@@ -39,7 +41,8 @@ class _BaseWidgetState extends State<BaseWidget> {
     EventPage(),
     ScrollablePage(),
     RoutePage(),
-    ValuePage()
+    ValuePage(),
+    LifeCyclePage()
   ];
   Widget _itemBuilder(BuildContext context, int index){
     return GestureDetector(

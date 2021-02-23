@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/base/value/Inherited_page.dart';
-
 import 'eventbus_page.dart';
 import 'notification_page.dart';
 class ValuePage extends StatelessWidget {
