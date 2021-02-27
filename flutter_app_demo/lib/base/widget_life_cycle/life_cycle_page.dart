@@ -6,7 +6,9 @@ class LifeCyclePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Widget生命周期&渲染原理'),),
-      body: MyStatefulWidget(),
+      body: Container(
+        child: Text('Widget生命周期&渲染原理'),
+      ),
     );
   }
 }
@@ -134,6 +136,7 @@ class _StfulItemState extends State<StfulItem> {
     );
   }
 }
+
 
 
 

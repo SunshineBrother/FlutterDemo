@@ -13,7 +13,7 @@ class ValuePage extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 30),
             RaisedButton(
-              child: Text('InheritedDemo'),
+              child: Text('InheritedDemo'),   
                 onPressed:(){
                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
                     return MyInheritedPage();

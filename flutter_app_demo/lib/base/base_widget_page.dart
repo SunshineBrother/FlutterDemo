@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/base/base_widget/widget_page.dart';
 import 'package:flutter_app_demo/base/container_page/container_page.dart';
 import 'package:flutter_app_demo/base/event/event_page.dart';
+import 'package:flutter_app_demo/base/event_queue_page/event_queue_page.dart';
+import 'package:flutter_app_demo/base/method_channel_page/method_channel_page.dart';
 import 'package:flutter_app_demo/base/route/one_page.dart';
 import 'package:flutter_app_demo/base/scrollable_widget/scrollable_widget.dart';
 import 'package:flutter_app_demo/base/value/value_page.dart';
@@ -33,7 +35,9 @@ class _BaseWidgetState extends State<BaseWidget> {
     '滚动组件',
     '路由与导航',
     '跨组件传递数据',
-    'Widget生命周期&渲染原理'
+    'Widget生命周期&渲染原理',
+    'Future异步详解',
+    'Flutter混编原生功能'
   ];
   List<Widget> _list = [
     WidgetPage(),
@@ -42,7 +46,9 @@ class _BaseWidgetState extends State<BaseWidget> {
     ScrollablePage(),
     RoutePage(),
     ValuePage(),
-    LifeCyclePage()
+    LifeCyclePage(),
+    EventQueuePage(),
+    MethodChannelPage()
   ];
   Widget _itemBuilder(BuildContext context, int index){
     return GestureDetector(
