@@ -1,6 +1,8 @@
 # FlutterDemo
 flutter初学项目
 
+![demo](https://github.com/SunshineBrother/demo.png)
+
 ## Dart基础语法
 - [1、Dart 基础语法-变量和常量](https://juejin.cn/post/6933877604625678344)
 - [2、Dart 基础语法-数值型](https://juejin.cn/post/6933875778501378055)
