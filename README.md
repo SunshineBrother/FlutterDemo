@@ -23,6 +23,9 @@ flutter初学项目
 - [7、Flutter Widget生命周期&渲染原理详解](https://juejin.cn/post/6933020064299876366)
 - [8、Flutter 单线程的Dart为何能够流程运行UI](https://juejin.cn/post/6933043674343604237)
 - [9、Flutter项目中怎么混编原生功能](https://juejin.cn/post/6933478020923064327)
+- [10、Flutter 热重载](https://juejin.cn/post/6939778440635613215)
+- [11、Flutter 状态管理(Provider)](https://juejin.cn/post/6940540309600223263)
+
 
 
 
