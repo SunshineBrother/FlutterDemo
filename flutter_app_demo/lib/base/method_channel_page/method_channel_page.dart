@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 // 声明 MethodChannel
 const platform = MethodChannel('flutter_postData');
 class MethodChannelPage extends StatelessWidget {

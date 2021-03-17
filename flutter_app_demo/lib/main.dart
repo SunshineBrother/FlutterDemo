@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/base/base_widget_page.dart';
+import 'package:flutter_app_demo/base/provider_page/color_model.dart';
 import 'package:flutter_app_demo/base/route/two_page.dart';
-
+import 'package:provider/provider.dart';
+import 'base/provider_page/counter_model.dart';
 import 'base/route/unknown_page.dart';
-void main() => runApp(MyApp());
-
+void main() {
+  runApp(
+      MultiProvider(
+        providers: [
+          ChangeNotifierProvider.value(value: ColorModel()),
+          ChangeNotifierProvider.value(value: CounterModel())],
+        child: MyApp(),
+  ));
+}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       title: "布局Demo",
       theme: ThemeData(
