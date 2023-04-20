@@ -23,7 +23,7 @@ class _OnePageState extends State<OnePage> {
     return Container(
         child: Column(
           children: [
-            RaisedButton(
+            TextButton(
                 child: Text('push two screen',style: TextStyle(fontSize: 20),),
                 onPressed:(){
                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
@@ -32,21 +32,21 @@ class _OnePageState extends State<OnePage> {
                 }
             ),
             SizedBox(height: 20),
-            RaisedButton(
+            TextButton(
                 child: Text('命名路由 push two screen',style: TextStyle(fontSize: 20),),
                 onPressed:(){
                   Navigator.pushNamed(context, "two_page");
                 }
             ),
             SizedBox(height: 20),
-            RaisedButton(
+            TextButton(
                 child: Text('错误路由处理 push UnknownPage',style: TextStyle(fontSize: 20),),
                 onPressed:(){
                   Navigator.pushNamed(context, "abc");
                 }
             ),
             SizedBox(height: 20),
-            RaisedButton(
+            TextButton(
                 child: Text('push two screen 传递参数',style: TextStyle(fontSize: 20),),
                 onPressed:(){
                   Navigator.pushNamed(context, "two_page",arguments: "one")

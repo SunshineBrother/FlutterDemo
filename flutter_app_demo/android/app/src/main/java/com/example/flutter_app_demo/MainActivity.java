@@ -3,7 +3,7 @@ package com.example.flutter_app_demo;
 import android.os.Bundle;
 import com.example.flutter_app_demo.MyFlutterViewFactory;
 import io.flutter.Log;
-import io.flutter.app.FlutterActivity;
+import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;

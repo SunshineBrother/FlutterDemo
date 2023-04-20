@@ -45,8 +45,8 @@ class RootPage extends StatefulWidget {
 class _RootPageState extends State<RootPage> {
   int _currentIndex = 0;
   List<BottomNavigationBarItem> _items = [
-    BottomNavigationBarItem(title: Text('基础'),icon: Icon(Icons.home)),
-    BottomNavigationBarItem(title: Text('约束布局'),icon: Icon(Icons.book))];
+    BottomNavigationBarItem(label: '基础',icon: Icon(Icons.home)),
+    BottomNavigationBarItem(label: '约束布局',icon: Icon(Icons.book))];
 
   final PageController _controller = PageController(initialPage: 0);
   List<Widget> _pages = [BaseWidgetPage(),BaseWidgetPage()];

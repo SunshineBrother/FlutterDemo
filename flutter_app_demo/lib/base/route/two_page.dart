@@ -9,7 +9,7 @@ class TwoPage extends StatelessWidget {
       body: Container(
         child: Column(
           children: [
-            RaisedButton(
+            TextButton(
                 child: Text('pop one screen',style: TextStyle(fontSize: 20)),
                 onPressed:(){
                  return Navigator.pop(context,"two");

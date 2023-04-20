@@ -18,75 +18,69 @@ class ContainerPage extends StatefulWidget {
 }
 
 class _ContainerPageState extends State<ContainerPage> {
-  List<String> _data = ['Container','Decoration(装饰器)','SizedBox','线性布局','弹性布局Flex','流式布局','叠加布局','宽高低','基础约束布局','深入理解约束布局','案例'];
-  List<Widget> _list = [BaseContainerPage(),BoxDecorationPage(),BaseSizeBoxPage(),LinearLayoutPage(),BaseFlexPage(),BaseWrapWidget(),BaseStackPage(),AspectRatioPage(),BaseBoxPage(),BoxPage(),BaseDemoPage()];
-  Widget _itemBuilder(BuildContext context, int index){
+  List<String> _data = [
+    'Container',
+    'Decoration(装饰器)',
+    'SizedBox',
+    '线性布局',
+    '弹性布局Flex',
+    '流式布局',
+    '叠加布局',
+    '宽高低',
+    '基础约束布局',
+    '深入理解约束布局',
+    '案例'
+  ];
+  List<Widget> _list = [
+    BaseContainerPage(),
+    BoxDecorationPage(),
+    BaseSizeBoxPage(),
+    LinearLayoutPage(),
+    BaseFlexPage(),
+    BaseWrapWidget(),
+    BaseStackPage(),
+    AspectRatioPage(),
+    BaseBoxPage(),
+    BoxPage(),
+    BaseDemoPage()
+  ];
+  Widget _itemBuilder(BuildContext context, int index) {
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
           return _list[index];
         }));
-
       },
       child: Container(
         color: Colors.red,
+        height: 50,
         child: Center(
-          child: Text(_data[index],style:TextStyle(color: Colors.white,fontSize:18)),
+          child: Text(_data[index],
+              style: TextStyle(color: Colors.white, fontSize: 18)),
         ),
       ),
     );
   }
-
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('基础布局'),),
-      body: Container(
-        child: StaggeredGridView.countBuilder(
-            crossAxisCount: 4,
+        appBar: AppBar(
+          title: Text('基础布局'),
+        ),
+        body: Container(
+          child: MasonryGridView.count(
             crossAxisSpacing: 4,
+            crossAxisCount: 1,
             mainAxisSpacing: 10,
-            itemCount:_data.length,
-            itemBuilder:  (BuildContext context, int index){
+            primary: true,
+            itemCount: _data.length,
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true, //收缩，让元素宽度自适应
+            itemBuilder: (BuildContext context, int index) {
               return _itemBuilder(context, index);
             },
-            staggeredTileBuilder:  (int index) =>
-            new StaggeredTile.count(2, index.isEven ? 2.5 : 3)
-        ),
-
-      ),
-    );
+          ),
+        ));
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

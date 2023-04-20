@@ -42,7 +42,7 @@ class _InheritedDemoState extends State<InheritedDemo> {
         child: Column(
           children: <Widget>[
             Test1(),
-            RaisedButton(
+            TextButton(
               child: Text('我是按钮'),
               onPressed: () => setState(() {
                 count++;

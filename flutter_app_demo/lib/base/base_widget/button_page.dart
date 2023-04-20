@@ -13,21 +13,14 @@ class ButtonPage extends StatelessWidget {
 
 
 class ButtonWidget extends StatelessWidget {
-  Widget _RaisedButton = RaisedButton(
-    child: Text('RaisedButton'),
+  Widget _TextButton = TextButton(
+    child: Text('TextButton'),
     onPressed: (){
     },
   );
-  Widget _FlatButton = FlatButton(
+  Widget _FlatButton = TextButton(
     child: Text('Button'),
-    color: Colors.blue,
-    onPressed: () {},
-  );
-  Widget _OutlineButton = OutlineButton(
-    borderSide: BorderSide(color: Colors.blue,width: 2),
-    disabledBorderColor: Colors.black,
-    highlightedBorderColor: Colors.red,
-    child: Text('OutlineButton'),
+
     onPressed: () {},
   );
   Widget _RawMaterialButton = RawMaterialButton(
@@ -48,9 +41,8 @@ class ButtonWidget extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          _RaisedButton,
+          _TextButton,
           _FlatButton,
-          _OutlineButton,
           _RawMaterialButton,
           _IconButton
         ],

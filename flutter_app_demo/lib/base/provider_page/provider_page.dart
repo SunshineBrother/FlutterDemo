@@ -30,12 +30,12 @@ class _FirstProviderPageState extends State<FirstProviderPage> {
           // 展示资源中的数据
           Text('Counter: ${_counter.counter}'),
           // 用资源更新方法来设置按钮点击回调
-          RaisedButton(
+          TextButton(
               child: Text('进入二级界面'),
               onPressed: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => SecondProviderPage()));
               }),
-          RaisedButton(
+          TextButton(
               child: Text('selector'),
               onPressed: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => GoodsProviderPage()));
@@ -70,7 +70,7 @@ class _SecondProviderPageState extends State<SecondProviderPage> {
           // 使用 Consumer 来封装 increment 的读取
           Consumer2<CounterModel,ColorModel>(
             //builder 函数可以直接获取到 increment 参数
-            builder: (context, CounterModel counter, ColorModel colormodel,child) => RaisedButton(
+            builder: (context, CounterModel counter, ColorModel colormodel,child) => TextButton(
             onPressed: (){
               counter.increment();
               colormodel.randomColor();

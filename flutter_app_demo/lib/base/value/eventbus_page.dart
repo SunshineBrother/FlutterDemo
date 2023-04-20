@@ -41,7 +41,7 @@ class _EventBusPageState extends State<EventBusPage> {
       child: Column(
         children: [
           Text(msg),
-          RaisedButton(
+          TextButton(
             child: Text('进入二级界面'),
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
@@ -60,7 +60,7 @@ class EventBusTwoPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("EventBusTwoPage"),),
       body: Center(
-        child: RaisedButton(
+        child: TextButton(
           child: Text('二级界面'),
           onPressed: (){
             bus.emit("eventName","二级页面来通知了");

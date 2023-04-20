@@ -92,7 +92,7 @@ class _IndexedStackDemoState extends State<IndexedStackDemo> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        RaisedButton(
+        TextButton(
           child: Text('1'),
           onPressed: (){
             setState(() {
@@ -100,7 +100,7 @@ class _IndexedStackDemoState extends State<IndexedStackDemo> {
             });
           },
         ),
-        RaisedButton(
+        TextButton(
           child: Text('2'),
           onPressed: (){
             setState(() {
@@ -108,7 +108,7 @@ class _IndexedStackDemoState extends State<IndexedStackDemo> {
             });
           },
         ),
-        RaisedButton(
+        TextButton(
           child: Text('3'),
           onPressed: (){
             setState(() {

@@ -106,7 +106,7 @@ class _IgnoreWidget extends State<IgnoreWidget> {
               onTap: () => print("GestureDetector Clicked"),
               child: IgnorePointer(
                 ignoring: _ignore,
-                child: RaisedButton(
+                child: TextButton(
                   onPressed: () => print("IgnorePointer clicked"),
                   child: Text("IgnorePointer"),
                 ),
@@ -116,7 +116,7 @@ class _IgnoreWidget extends State<IgnoreWidget> {
               onTap: () => print("GestureDetector Clicked"),
               child: AbsorbPointer(
                 absorbing: _ignore,
-                child: RaisedButton(
+                child: TextButton(
                   onPressed: () => print("AbsorbPointer clicked"),
                   child: Text("AbsorbPointer"),
                 ),

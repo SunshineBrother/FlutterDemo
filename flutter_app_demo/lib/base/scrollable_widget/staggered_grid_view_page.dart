@@ -1,26 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+
 class StaggeredGridViewPage extends StatelessWidget {
   const StaggeredGridViewPage({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: StaggeredGridView.countBuilder(
-          crossAxisCount: 4,
-          itemCount: 8,
-          itemBuilder: (BuildContext context, int index) => new Container(
-              color: Colors.red,
-              child: new Center(
-                child: new CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: new Text('$index'),
-                ),
-              )),
-          staggeredTileBuilder: (int index) =>
-          new StaggeredTile.count(2, index.isEven ? 2 : 1),
-          mainAxisSpacing: 4.0,
-          crossAxisSpacing: 4.0,
-        )
-    );
+        child: StaggeredGrid.count(
+      crossAxisCount: 4,
+      mainAxisSpacing: 4,
+      crossAxisSpacing: 4,
+      children: const [
+        StaggeredGridTile.count(
+            crossAxisCellCount: 2,
+            mainAxisCellCount: 2,
+            child: Text("0", textAlign: TextAlign.center)),
+        StaggeredGridTile.count(
+            crossAxisCellCount: 2,
+            mainAxisCellCount: 1,
+            child: Text("1", textAlign: TextAlign.center)),
+        StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Text("2", textAlign: TextAlign.center)),
+        StaggeredGridTile.count(
+            crossAxisCellCount: 1,
+            mainAxisCellCount: 1,
+            child: Text("3", textAlign: TextAlign.center)),
+        StaggeredGridTile.count(
+            crossAxisCellCount: 4,
+            mainAxisCellCount: 2,
+            child: Text("4", textAlign: TextAlign.center)),
+      ],
+    ));
   }
 }

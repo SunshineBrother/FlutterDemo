@@ -63,7 +63,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     print('build方法被调用了!');
     return Column(
       children: <Widget>[
-        RaisedButton(
+        TextButton(
           child: Icon(Icons.add),
           onPressed: () {
             _count++;
@@ -71,7 +71,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           },
         ),
         Text('$_count'),
-        RaisedButton(
+        TextButton(
           child: Text('移除'),
           onPressed: () {
             setState(() {

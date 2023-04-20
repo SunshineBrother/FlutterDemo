@@ -13,7 +13,7 @@ class MethodChannelPage extends StatelessWidget {
       body: Container(
         child: Column(
           children: [
-            RaisedButton(
+            TextButton(
               child: Text('Flutter向原生传值'),
               onPressed: () async{
                 List result;

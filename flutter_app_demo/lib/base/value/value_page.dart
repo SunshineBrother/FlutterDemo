@@ -12,7 +12,7 @@ class ValuePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(height: 30),
-            RaisedButton(
+            TextButton(
               child: Text('InheritedDemo'),   
                 onPressed:(){
                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
@@ -21,7 +21,7 @@ class ValuePage extends StatelessWidget {
                 }
             ),
             SizedBox(height: 30),
-            RaisedButton(
+            TextButton(
                 child: Text('NotificationDemo'),
                 onPressed:(){
                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
@@ -30,7 +30,7 @@ class ValuePage extends StatelessWidget {
                 }
             ),
             SizedBox(height: 30),
-            RaisedButton(
+            TextButton(
                 child: Text('EventBusDemoPage'),
                 onPressed:(){
                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){

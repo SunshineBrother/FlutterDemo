@@ -23,7 +23,7 @@ class ChildNotificationWidget extends StatefulWidget {
 class _ChildNotificationWidgetState extends State<ChildNotificationWidget> {
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return TextButton(
       // 按钮点击时分发通知
       onPressed: () => MyNotification("你好，Flutter").dispatch(context),
       child: Text("Fire Notification"),
