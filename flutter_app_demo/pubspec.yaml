@@ -23,21 +23,34 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_staggered_grid_view: 0.6.2
-  toast: 0.1.3
-  event_bus: 1.1.0
-  provider: 6.0.5
+  # ----- 工具 库 -----------
+  dio: 5.1.1 # 网络请求
+  connectivity: 3.0.6 # 网络监控
+  event_bus: 1.1.0 # 事件通知: 注意通知关闭的时机
+  provider: 6.0.5 # 状态管理: 建议单个页面单个Provider，多个页面合用一个provider容易出现数据未清除问题
   uuid: 3.0.7 #flutter侧的UUID生成器
   path: 1.8.2 #Dart 路径操作库
+  equatable: 2.0.3 #对象比较库
+  json_serializable: 6.6.1 # json解析
+  shared_preferences: ^2.1.0 # 本地存储
+  path_provider: ^2.0.14 # 本地路径查询，实现清除缓存功能
+  permission_handler: ^10.2.0 # 权限申请
+  intl_utils: ^2.8.2 # 多语言
+  flutter_lints: ^2.0.1 # 代码约束
+  # ----- UI 库 -----------
+  flutter_staggered_grid_view: 0.6.2 # 瀑布流
+  image_picker: 0.8.4 #图片选择器
+  bot_toast: 4.0.1 #Toast库
+  toast: 0.1.3 # toast
   jiffy: 4.1.0 #Flutter的日期时间库
   scrollable_positioned_list: 0.2.3 #列表工具库，可以指定滚动位置
   badges: 2.0.2 #提示组件库(例：未读小红点)
   pull_to_refresh: 2.0.0 #下拉刷新库
   gzx_dropdown_menu: 3.1.0 #下拉筛选菜单
-  equatable: 2.0.3 #对象比较库
-  bot_toast: 4.0.1 #Toast库
+  flutter_easyloading: ^3.0.3 # 网络加载loading
   cached_network_image: 3.2.0 #加载并缓存图像库
-  image_picker: 0.8.4 #图片选择器
+  flutter_inappwebview: ^5.7.2+3 # 官方web
+
 
 
 
