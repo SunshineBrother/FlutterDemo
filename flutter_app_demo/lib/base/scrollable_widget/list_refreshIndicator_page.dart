@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/constant/const.dart';
-import 'package:toast/toast.dart';
 import 'package:flutter_app_demo/base/scrollable_widget/cat_item.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class ListRefreshIndicatorPage extends StatefulWidget {
   const ListRefreshIndicatorPage({Key key}) : super(key: key);
@@ -51,7 +51,7 @@ class _ListRefreshIndicatorPageState extends State<ListRefreshIndicatorPage> {
   //下拉刷新
   Future onRefresh() {
     return Future.delayed(Duration(seconds: 1), () {
-      Toast.show('当前已是最新数据', context);
+      Fluttertoast.showToast(msg: '当前已是最新数据');
     });
   }
 
