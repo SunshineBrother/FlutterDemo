@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_demo/const.dart';
+import 'package:flutter_app_demo/constant/const.dart';
 
 class ShapePage extends StatelessWidget {
   @override

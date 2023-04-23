@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_demo/const.dart';
+import 'package:flutter_app_demo/constant/const.dart';
 
 class ChipPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('标签'),),
+      appBar: AppBar(
+        title: Text('标签'),
+      ),
       body: Container(
         child: Center(child: ChipWidget()),
       ),
@@ -39,9 +41,3 @@ class _ChipWidgetState extends State<ChipWidget> {
     );
   }
 }
-
-
-
-
-
-

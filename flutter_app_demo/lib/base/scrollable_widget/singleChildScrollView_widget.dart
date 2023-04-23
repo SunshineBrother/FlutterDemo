@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../const.dart';
+import '../../constant/const.dart';
+
 class SingleChildScrollViewPage extends StatelessWidget {
   const SingleChildScrollViewPage({Key key}) : super(key: key);
   @override

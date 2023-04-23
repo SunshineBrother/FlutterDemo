@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import '../../const.dart';
+import '../../constant/const.dart';
 
 class LifeCyclePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Widget生命周期&渲染原理'),),
+      appBar: AppBar(
+        title: Text('Widget生命周期&渲染原理'),
+      ),
       body: Container(
         child: Text('Widget生命周期&渲染原理'),
       ),
@@ -13,11 +15,9 @@ class LifeCyclePage extends StatelessWidget {
   }
 }
 
-
-
 class MyStatelessWidget extends StatelessWidget {
   final String title;
-  MyStatelessWidget({this.title}){
+  MyStatelessWidget({this.title}) {
     print('构造函数被调用了!');
   }
   @override
@@ -29,7 +29,7 @@ class MyStatelessWidget extends StatelessWidget {
 
 class MyStatefulWidget extends StatefulWidget {
   final String title;
-  MyStatefulWidget({this.title}){
+  MyStatefulWidget({this.title}) {
     print('构造函数被调用了!');
   }
   @override
@@ -58,6 +58,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     print('State的init来了!');
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     print('build方法被调用了!');
@@ -86,6 +87,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ],
     );
   }
+
   @override
   void didChangeDependencies() {
     print('didChangeDependencies');
@@ -103,6 +105,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   void deactivate() {
     super.deactivate();
   }
+
   //当Widget销毁的时候， 调用State的dispose
   @override
   void dispose() {
@@ -110,7 +113,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     super.dispose();
   }
 }
-
 
 class StfulItem extends StatefulWidget {
   final title;
@@ -126,6 +128,7 @@ class _StfulItemState extends State<StfulItem> {
     print('子widget要didUpdateWidget');
     super.didUpdateWidget(oldWidget);
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -136,19 +139,3 @@ class _StfulItemState extends State<StfulItem> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

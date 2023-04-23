@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../../const.dart';
+import '../../constant/const.dart';
 
 class BoxPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('深入理解约束布局'),),
+      appBar: AppBar(
+        title: Text('深入理解约束布局'),
+      ),
       body: _BoxWidget(),
     );
   }
 }
- 
+
 class _BoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,14 +28,12 @@ class _BoxWidget extends StatelessWidget {
               child: ConstrainedBox(
                   constraints: BoxConstraints.tightFor(
                       width: double.infinity, height: double.infinity),
-                  child:  Demo1())),
+                  child: Demo1())),
         ),
       ),
     );
   }
 }
-
-
 
 class Demo1 extends StatelessWidget {
   @override
@@ -41,4 +41,3 @@ class Demo1 extends StatelessWidget {
     return Container(color: Colors.red);
   }
 }
-
