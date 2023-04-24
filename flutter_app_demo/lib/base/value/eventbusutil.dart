@@ -9,27 +9,23 @@ class EventBus {
   static EventBus _singleton = new EventBus._internal();
 
   //工厂构造函数
-  factory EventBus()=> _singleton;
+  factory EventBus() => _singleton;
 
   //保存事件订阅者队列，key:事件名(id)，value: 对应事件的订阅者队列
   var _emap = new Map<Object, List<EventCallback>>();
 
   //添加订阅者
   void on(eventName, EventCallback f) {
-    if (eventName == null || f == null) return;
-    _emap[eventName] ??= new List<EventCallback>();
-    _emap[eventName].add(f);
+    if (eventName == null) return;
+    _emap[eventName] ??= <EventCallback>[];
+    _emap[eventName]?.add(f);
   }
 
   //移除订阅者
-  void off(eventName, [EventCallback f]) {
+  void off(eventName, [EventCallback? f]) {
     var list = _emap[eventName];
     if (eventName == null || list == null) return;
-    if (f == null) {
-      _emap[eventName] = null;
-    } else {
-      list.remove(f);
-    }
+    list.remove(f);
   }
 
   //触发事件，事件触发后该事件所有订阅者会被调用

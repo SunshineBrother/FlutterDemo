@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+
 class DemoTabViewModel {
   final String title;
   final Widget widget;
   const DemoTabViewModel({
-    this.title,
-    this.widget,
+    required this.title,
+    required this.widget,
   });
 }
 
@@ -15,10 +16,10 @@ class DemoTabs extends StatelessWidget {
   final TabController tabController;
 
   DemoTabs({
-    this.title,
-    this.demos,
+    required this.title,
+    required this.demos,
     this.tabScrollable = true,
-    this.tabController,
+    required this.tabController,
   });
 
   @override

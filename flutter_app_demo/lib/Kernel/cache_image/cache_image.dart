@@ -12,20 +12,20 @@ class CaCheImageWidget extends StatelessWidget {
   final String imageUrl;
 
   /// 图片高度
-  final double imageHeight;
+  final double? imageHeight;
 
   /// 图片宽度
-  final double imageWidth;
+  final double? imageWidth;
 
   ///图片的缩放模式
-  final BoxFit fit;
+  final BoxFit? fit;
 
   /// 占位图
-  final Widget placeholder;
+  final Widget? placeholder;
 
   const CaCheImageWidget(
       {Key? key,
-      @required this.imageUrl,
+      required this.imageUrl,
       this.imageHeight,
       this.imageWidth,
       this.fit,
@@ -45,7 +45,7 @@ class CaCheImageWidget extends StatelessWidget {
             BuildContext context,
             String url,
           ) {
-            return placeholder;
+            return placeholder ?? Container();
           });
     }
 

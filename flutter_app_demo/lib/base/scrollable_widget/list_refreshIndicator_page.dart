@@ -4,7 +4,7 @@ import 'package:flutter_app_demo/base/scrollable_widget/cat_item.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class ListRefreshIndicatorPage extends StatefulWidget {
-  const ListRefreshIndicatorPage({Key key}) : super(key: key);
+  const ListRefreshIndicatorPage({Key? key}) : super(key: key);
   @override
   _ListRefreshIndicatorPageState createState() =>
       _ListRefreshIndicatorPageState();

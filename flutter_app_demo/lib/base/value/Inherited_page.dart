@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+
 class MyInheritedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('InheritedDemo'),),
+      appBar: AppBar(
+        title: Text('InheritedDemo'),
+      ),
       body: InheritedDemo(),
     );
   }
 }
 
 class MyData extends InheritedWidget {
-  MyData({this.data, Widget child}) : super(child: child);
+  MyData({required this.data, required Widget child}) : super(child: child);
 
   final int data; //需要在子树中共享的数据，保存点击次数
 
   //定义一个便捷方法，方便子树中的widget获取共享数据
-  static MyData of(BuildContext context) {
+  static MyData? of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<MyData>();
   }
 
@@ -81,7 +84,7 @@ class Test3 extends StatefulWidget {
 class _Test3State extends State<Test3> {
   @override
   Widget build(BuildContext context) {
-    return Text(MyData.of(context).data.toString());
+    return Text(MyData.of(context)?.data.toString() ?? "");
   }
 
   @override

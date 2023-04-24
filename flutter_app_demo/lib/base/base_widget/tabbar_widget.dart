@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
-const TITLE = '标题标题标题标题标题标题标题';
 
+const TITLE = '标题标题标题标题标题标题标题';
 
 class TabBarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('TabBar组件'),),
+      appBar: AppBar(
+        title: Text('TabBar组件'),
+      ),
       body: TabControllerDemo(),
     );
   }
 }
 
 class TabControllerDemo extends StatefulWidget {
-  TabControllerDemo({Key key}) : super(key: key);
+  TabControllerDemo({Key? key}) : super(key: key);
 
   _TabControllerDemoState createState() => _TabControllerDemoState();
 }
 
 class _TabControllerDemoState extends State<TabControllerDemo>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  late TabController _tabController;
 
   @override
   void initState() {
@@ -71,13 +73,12 @@ class _TabControllerDemoState extends State<TabControllerDemo>
             ListViewContnet(),
             ListViewContnet(),
           ],
-        )
-    );
+        ));
   }
 }
 
 class ListViewContnet extends StatelessWidget {
-  const ListViewContnet({Key key}) : super(key: key);
+  const ListViewContnet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -97,5 +98,3 @@ class ListViewContnet extends StatelessWidget {
     );
   }
 }
-
-

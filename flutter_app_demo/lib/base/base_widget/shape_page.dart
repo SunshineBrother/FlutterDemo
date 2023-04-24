@@ -32,6 +32,7 @@ class ShapeWidget extends StatelessWidget {
     width: 100,
     height: 100,
     child: TextButton(
+      onPressed: () {},
       style: ButtonStyle(
           shape: MaterialStateProperty.all(
               CircleBorder(side: BorderSide(color: Colors.red)))),
@@ -45,6 +46,7 @@ class ShapeWidget extends StatelessWidget {
     width: 300,
     height: 100,
     child: TextButton(
+      onPressed: () {},
       style: ButtonStyle(
           shape: MaterialStateProperty.all(ContinuousRectangleBorder(
               side: BorderSide(color: Colors.red),
@@ -59,6 +61,7 @@ class ShapeWidget extends StatelessWidget {
     width: 300,
     height: 100,
     child: TextButton(
+      onPressed: () {},
       style: ButtonStyle(
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               side: BorderSide(color: Colors.red, width: 2),
@@ -73,6 +76,7 @@ class ShapeWidget extends StatelessWidget {
     width: 200,
     height: 50,
     child: TextButton(
+      onPressed: () {},
       child: Text('TextButton'),
     ),
   );

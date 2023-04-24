@@ -17,7 +17,7 @@ class LifeCyclePage extends StatelessWidget {
 
 class MyStatelessWidget extends StatelessWidget {
   final String title;
-  MyStatelessWidget({this.title}) {
+  MyStatelessWidget({required this.title}) {
     print('构造函数被调用了!');
   }
   @override
@@ -29,7 +29,7 @@ class MyStatelessWidget extends StatelessWidget {
 
 class MyStatefulWidget extends StatefulWidget {
   final String title;
-  MyStatefulWidget({this.title}) {
+  MyStatefulWidget({required this.title}) {
     print('构造函数被调用了!');
   }
   @override
@@ -116,7 +116,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
 class StfulItem extends StatefulWidget {
   final title;
-  StfulItem(this.title, {Key key}) : super(key: key);
+  StfulItem(this.title, {Key? key}) : super(key: key);
   @override
   _StfulItemState createState() => _StfulItemState();
 }

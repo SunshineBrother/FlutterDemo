@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+
 class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('NotificationDemo'),),
+      appBar: AppBar(
+        title: Text('NotificationDemo'),
+      ),
       body: parentNotificationWidget(),
     );
   }
@@ -17,7 +20,8 @@ class MyNotification extends Notification {
 //子widget
 class ChildNotificationWidget extends StatefulWidget {
   @override
-  _ChildNotificationWidgetState createState() => _ChildNotificationWidgetState();
+  _ChildNotificationWidgetState createState() =>
+      _ChildNotificationWidgetState();
 }
 
 class _ChildNotificationWidgetState extends State<ChildNotificationWidget> {
@@ -34,7 +38,8 @@ class _ChildNotificationWidgetState extends State<ChildNotificationWidget> {
 //父widget
 class parentNotificationWidget extends StatefulWidget {
   @override
-  _parentNotificationWidgetState createState() => _parentNotificationWidgetState();
+  _parentNotificationWidgetState createState() =>
+      _parentNotificationWidgetState();
 }
 
 class _parentNotificationWidgetState extends State<parentNotificationWidget> {
@@ -44,23 +49,17 @@ class _parentNotificationWidgetState extends State<parentNotificationWidget> {
     // 监听通知
     return NotificationListener<MyNotification>(
         onNotification: (notification) {
-          setState(() {_msg += notification.msg+"  ";});// 收到子 Widget 通知，更新 msg
+          setState(() {
+            _msg += notification.msg + "  ";
+          }); // 收到子 Widget 通知，更新 msg
+          return true;
         },
-        child:Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(_msg),
-            ChildNotificationWidget()],// 将子 Widget 加入到视图树中
-        )
-    );
+            ChildNotificationWidget()
+          ], // 将子 Widget 加入到视图树中
+        ));
   }
 }
-
-
-
-
-
-
-
-
-

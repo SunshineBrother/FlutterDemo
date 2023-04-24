@@ -12,36 +12,18 @@ import 'list_refreshIndicator_page.dart';
 import 'listview_build_page.dart';
 
 const List<DemoTabViewModel> demos = [
+  DemoTabViewModel(title: 'ScrollController', widget: ScrollControllerPage()),
   DemoTabViewModel(
-      title: 'ScrollController',
-      widget: ScrollControllerPage()),
+      title: 'SingleChildScrollView', widget: SingleChildScrollViewPage()),
+  DemoTabViewModel(title: "默认构造函数", widget: ListViewPage1()),
+  DemoTabViewModel(title: "ListView.builder", widget: ListViewBuilderPage()),
   DemoTabViewModel(
-      title: 'SingleChildScrollView',
-      widget: SingleChildScrollViewPage()),
-  DemoTabViewModel(
-      title: "默认构造函数",
-      widget: ListViewPage1()),
-  DemoTabViewModel(
-      title: "ListView.builder",
-      widget: ListViewBuilderPage()),
-  DemoTabViewModel(
-      title: "ListView.separated",
-      widget: ListViewSeparatedPage()),
-  DemoTabViewModel(
-      title: "ListTile",
-      widget: ListTitlePage()),
-  DemoTabViewModel(
-      title: "Card",
-      widget: ListCardPage()),
-  DemoTabViewModel(
-      title: "刷新",
-      widget: ListRefreshIndicatorPage()),
-  DemoTabViewModel(
-      title: "GridView",
-      widget: GridViewPage()),
-  DemoTabViewModel(
-      title: "StaggeredGridView",
-      widget: StaggeredGridViewPage()),
+      title: "ListView.separated", widget: ListViewSeparatedPage()),
+  DemoTabViewModel(title: "ListTile", widget: ListTitlePage()),
+  DemoTabViewModel(title: "Card", widget: ListCardPage()),
+  DemoTabViewModel(title: "刷新", widget: ListRefreshIndicatorPage()),
+  DemoTabViewModel(title: "GridView", widget: GridViewPage()),
+  DemoTabViewModel(title: "StaggeredGridView", widget: StaggeredGridViewPage()),
 ];
 
 class ScrollablePage extends StatefulWidget {
@@ -51,7 +33,7 @@ class ScrollablePage extends StatefulWidget {
 
 class _ScrollablePageState extends State<ScrollablePage>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
 
   @override
   void initState() {
@@ -74,6 +56,3 @@ class _ScrollablePageState extends State<ScrollablePage>
     );
   }
 }
-
-
-

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+
 class ListCardPage extends StatelessWidget {
-  const ListCardPage({Key key}) : super(key: key);
+  const ListCardPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
       child: ListView.builder(
           itemCount: 50,
-          itemBuilder:(BuildContext context, int index){
+          itemBuilder: (BuildContext context, int index) {
             return Card(
               color: Colors.white,
               child: ListTile(
@@ -20,8 +21,7 @@ class ListCardPage extends StatelessWidget {
                 onLongPress: () => print("$index被长按了"),
               ),
             );
-          }
-      ),
+          }),
     );
   }
 }
