@@ -42,12 +42,12 @@ dependencies:
   flutter_staggered_grid_view: 0.6.2 # 瀑布流
   image_picker: 0.8.4 #图片选择器
   fluttertoast: ^8.2.1 # toast
+  flutter_easyloading: ^3.0.3 # 网络加载loading
   jiffy: 4.1.0 #Flutter的日期时间库
   scrollable_positioned_list: 0.2.3 #列表工具库，可以指定滚动位置
   badges: 2.0.2 #提示组件库(例：未读小红点)
   pull_to_refresh: 2.0.0 #下拉刷新库
   gzx_dropdown_menu: 3.1.0 #下拉筛选菜单
-  flutter_easyloading: ^3.0.3 # 网络加载loading
   cached_network_image: 3.2.0 #加载并缓存图像库
   flutter_inappwebview: ^5.7.2+3 # 官方web
 
