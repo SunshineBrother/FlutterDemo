@@ -7,6 +7,7 @@ import 'package:flutter_app_demo/base/method_channel_page/method_channel_page.da
 import 'package:flutter_app_demo/base/provider_page/provider_page.dart';
 import 'package:flutter_app_demo/base/route/one_page.dart';
 import 'package:flutter_app_demo/base/scrollable_widget/scrollable_widget.dart';
+import 'package:flutter_app_demo/base/test_third/test_third.dart';
 import 'package:flutter_app_demo/base/value/value_page.dart';
 import 'package:flutter_app_demo/base/widget_life_cycle/life_cycle_page.dart';
 
@@ -40,7 +41,8 @@ class _BaseWidgetState extends State<BaseWidget> {
     'Widget生命周期&渲染原理',
     'Future异步详解',
     'Flutter混编原生功能',
-    'Flutter 状态管理(Provider)'
+    'Flutter 状态管理(Provider)',
+    '三方库测试'
   ];
   List<Widget> _list = [
     WidgetPage(),
@@ -52,7 +54,8 @@ class _BaseWidgetState extends State<BaseWidget> {
     LifeCyclePage(),
     EventQueuePage(),
     MethodChannelPage(),
-    MyProviderPage()
+    MyProviderPage(),
+    TestThirdLidPage()
   ];
   Widget _itemBuilder(BuildContext context, int index) {
     return GestureDetector(
@@ -80,22 +83,6 @@ class _BaseWidgetState extends State<BaseWidget> {
           itemExtent: 50.0, //强制高度为50.0
           itemCount: _data.length,
           itemBuilder: _itemBuilder),
-    );
-  }
-}
-
-class _ListItem extends StatelessWidget {
-  final String title;
-  const _ListItem({Key? key, required this.title}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Container(
-        height: 45,
-        color: Colors.white,
-        alignment: Alignment.center,
-        child: Text('$title'),
-      ),
     );
   }
 }
