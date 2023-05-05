@@ -5,4 +5,6 @@
 ///
 /// @Description TODO
 
-class ScreenUtil {}
+class ScreenUtil {
+
+}

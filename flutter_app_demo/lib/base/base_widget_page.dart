@@ -11,12 +11,14 @@ import 'package:flutter_app_demo/base/test_third/test_third.dart';
 import 'package:flutter_app_demo/base/value/value_page.dart';
 import 'package:flutter_app_demo/base/widget_life_cycle/life_cycle_page.dart';
 
+import '../generated/l10n.dart';
+
 class BaseWidgetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('基础'),
+        title: Text(S.current.base_widget),
       ),
       body: Center(
         child: BaseWidget(),
@@ -32,17 +34,17 @@ class BaseWidget extends StatefulWidget {
 
 class _BaseWidgetState extends State<BaseWidget> {
   List<String> _data = [
-    '基础组件',
-    '布局组件',
-    '交互事件',
-    '滚动组件',
-    '路由与导航',
-    '跨组件传递数据',
-    'Widget生命周期&渲染原理',
-    'Future异步详解',
-    'Flutter混编原生功能',
-    'Flutter 状态管理(Provider)',
-    '三方库测试'
+    S.current.base_widget,
+    S.current.layout_widget,
+    S.current.interactive_event,
+    S.current.scroll_widget,
+    S.current.router_navigation,
+    S.current.transfer_data,
+    S.current.widget_life_cycle,
+    S.current.future_asyn,
+    S.current.future_native,
+    S.current.future_provider,
+    S.current.lid_test
   ];
   List<Widget> _list = [
     WidgetPage(),

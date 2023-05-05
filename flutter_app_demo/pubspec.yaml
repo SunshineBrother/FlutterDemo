@@ -23,6 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   # ----- 工具 库 -----------
   dio: ^5.1.1 # 网络请求
   connectivity: ^3.0.6 # 网络监控
@@ -35,7 +37,8 @@ dependencies:
   shared_preferences: ^2.1.0 # 本地存储
   path_provider: ^2.0.14 # 本地路径查询，实现清除缓存功能
   permission_handler: ^10.2.0 # 权限申请
-  intl_utils: ^2.8.2 # 多语言
+
+
 
   # ----- UI 库 -----------
   flutter_screenutil: ^5.7.0 # 屏幕适配
@@ -43,7 +46,7 @@ dependencies:
   image_picker: ^0.8.7+4 #图片选择器
   fluttertoast: ^8.2.1 # toast
   flutter_easyloading: ^3.0.5 # 网络加载loading
-  jiffy: ^6.1.0 #Flutter的日期时间库
+#  jiffy: ^6.1.0 #Flutter的日期时间库
   scrollable_positioned_list: ^0.3.5 #列表工具库，可以指定滚动位置
   badges: ^3.1.1 #提示组件库(例：未读小红点)
   pull_to_refresh: ^2.0.0 #下拉刷新库
@@ -104,3 +107,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true
