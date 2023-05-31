@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demo/base/test_third/router_test.dart';
+import 'package:flutter_app_demo/base/test_third/screenUtil_test.dart';
 import 'package:flutter_app_demo/base/test_third/toast_test.dart';
 import 'package:flutter_app_demo/widgets/base_item_widget.dart';
 
@@ -29,16 +30,30 @@ class TestLibWidget extends StatelessWidget {
     return Container(
         child: Column(
       children: [
-        TextButton(
-          style: ButtonStyle(),
-          child: Text("测试Loading"),
-          onPressed: () {
+        GestureDetector(
+          child: ListItemWidget(title: "测试Loading"),
+          onTap: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (context) {
               return TestToastWidget();
             }));
           },
         ),
-        ListItemWidget(title: "测试")
+        GestureDetector(
+          child: ListItemWidget(title: "布局测试"),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+              return ScreenUtilPage();
+            }));
+          },
+        ),
+        GestureDetector(
+          child: ListItemWidget(title: "测试路由"),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+              return RouterTestPage();
+            }));
+          },
+        )
       ],
     ));
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../constant/const.dart';
+import '../../global/constant/color_const.dart';
 
 class LifeCyclePage extends StatelessWidget {
   @override

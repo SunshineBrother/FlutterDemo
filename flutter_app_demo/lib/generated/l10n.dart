@@ -50,10 +50,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `布局Demo`
+  /// `Home`
   String get tab_demo {
     return Intl.message(
-      '布局Demo',
+      'Home',
       name: 'tab_demo',
       desc: '',
       args: [],
@@ -165,6 +165,46 @@ class S {
     return Intl.message(
       'Library Test',
       name: 'lid_test',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `switch the language`
+  String get switch_lan {
+    return Intl.message(
+      'switch the language',
+      name: 'switch_lan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `login`
+  String get login {
+    return Intl.message(
+      'login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `UserInfo`
+  String get personal_center {
+    return Intl.message(
+      'UserInfo',
+      name: 'personal_center',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `showDialog`
+  String get show_dialog {
+    return Intl.message(
+      'showDialog',
+      name: 'show_dialog',
       desc: '',
       args: [],
     );

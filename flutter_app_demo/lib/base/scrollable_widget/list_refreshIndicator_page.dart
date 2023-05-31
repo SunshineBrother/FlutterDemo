@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_demo/constant/const.dart';
+import 'package:flutter_app_demo/global/constant/color_const.dart';
 import 'package:flutter_app_demo/base/scrollable_widget/cat_item.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 

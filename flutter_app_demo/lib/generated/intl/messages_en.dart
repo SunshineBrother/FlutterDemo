@@ -31,10 +31,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Interactive Event"),
         "layout_widget": MessageLookupByLibrary.simpleMessage("Layout Widget"),
         "lid_test": MessageLookupByLibrary.simpleMessage("Library Test"),
+        "login": MessageLookupByLibrary.simpleMessage("login"),
+        "personal_center": MessageLookupByLibrary.simpleMessage("UserInfo"),
         "router_navigation":
             MessageLookupByLibrary.simpleMessage("Router And Navigation"),
         "scroll_widget": MessageLookupByLibrary.simpleMessage("Scroll Widget"),
-        "tab_demo": MessageLookupByLibrary.simpleMessage("布局Demo"),
+        "show_dialog": MessageLookupByLibrary.simpleMessage("showDialog"),
+        "switch_lan":
+            MessageLookupByLibrary.simpleMessage("switch the language"),
+        "tab_demo": MessageLookupByLibrary.simpleMessage("Home"),
         "transfer_data": MessageLookupByLibrary.simpleMessage("Transfer Fata"),
         "widget_life_cycle":
             MessageLookupByLibrary.simpleMessage("Widget Life Cycle")

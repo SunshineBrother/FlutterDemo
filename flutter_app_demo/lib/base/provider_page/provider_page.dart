@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/base/provider_page/color_model.dart';
 import 'package:flutter_app_demo/base/provider_page/counter_model.dart';
 import 'package:flutter_app_demo/base/provider_page/provider_selector.dart';
-import 'package:flutter_app_demo/constant/const.dart';
+import 'package:flutter_app_demo/global/constant/color_const.dart';
 import 'package:provider/provider.dart';
 
 class MyProviderPage extends StatelessWidget {

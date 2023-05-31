@@ -1,5 +1,5 @@
 {
-  "tab_demo" : "布局Demo",
+  "tab_demo" : "Home",
   "base_widget" : "Base Widget",
   "layout_widget" : "Layout Widget",
   "interactive_event" : "Interactive Event",
@@ -11,9 +11,10 @@
   "future_native" : "Flutter Native",
   "future_provider" : "Flutter（Provider）",
   "lid_test" : "Library Test",
-  "" : "",
-  "" : "",
-  "" : "",
+  "switch_lan" : "switch the language",
+  "login" : "login",
+  "personal_center" : "UserInfo",
+  "show_dialog" : "showDialog",
   "" : "",
   "" : "",
   "" : ""

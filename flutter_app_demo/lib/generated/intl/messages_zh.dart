@@ -30,9 +30,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "interactive_event": MessageLookupByLibrary.simpleMessage("交互事件"),
         "layout_widget": MessageLookupByLibrary.simpleMessage("布局组件"),
         "lid_test": MessageLookupByLibrary.simpleMessage("三方库测试"),
+        "login": MessageLookupByLibrary.simpleMessage("登录"),
+        "personal_center": MessageLookupByLibrary.simpleMessage("个人"),
         "router_navigation": MessageLookupByLibrary.simpleMessage("路由与导航"),
         "scroll_widget": MessageLookupByLibrary.simpleMessage("滚动组件"),
-        "tab_demo": MessageLookupByLibrary.simpleMessage("tab Demo"),
+        "show_dialog": MessageLookupByLibrary.simpleMessage("弹窗"),
+        "switch_lan": MessageLookupByLibrary.simpleMessage("切换语言"),
+        "tab_demo": MessageLookupByLibrary.simpleMessage("首页"),
         "transfer_data": MessageLookupByLibrary.simpleMessage("跨组件传递数据"),
         "widget_life_cycle":
             MessageLookupByLibrary.simpleMessage("Widget的生命周期&渲染原理")

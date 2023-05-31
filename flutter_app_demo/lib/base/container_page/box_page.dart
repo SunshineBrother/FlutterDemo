@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../constant/const.dart';
+import '../../global/constant/color_const.dart';
 
 class BoxPage extends StatelessWidget {
   @override

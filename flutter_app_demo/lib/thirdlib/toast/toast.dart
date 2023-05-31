@@ -1,7 +1,5 @@
-import 'dart:ffi';
-
+import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 /// FileName toast.dart
 ///
@@ -13,15 +11,28 @@ class Toast {
   //// 作者 jiangjunhui
   /// 时间 2023/4/24
   /// 功能描述 显示提升信息
-  static void showToast({required String msg, int duration = 2000}) {
-    Fluttertoast.showToast(msg: msg, timeInSecForIosWeb: duration);
+  static void showToast(
+      {required String msg, int duration = 2000, bool dismissOnTap = false}) {
+    EasyLoading.showToast(msg,
+        duration: Duration(milliseconds: duration),
+        toastPosition: EasyLoadingToastPosition.center,
+        dismissOnTap: dismissOnTap);
   }
 
   //// 作者 jiangjunhui
   /// 时间 2023/4/24
   /// 功能描述 loading
-  static void showLoading({required String msg}) {
-    EasyLoading.showToast(msg);
+  static void showLoading({required String msg, bool dismissOnTap = false}) {
+    EasyLoading.instance
+      ..indicatorType = EasyLoadingIndicatorType.circle
+      ..loadingStyle = EasyLoadingStyle.dark
+      ..radius = 5.0
+      ..maskColor = Colors.white.withOpacity(0.1);
+
+    EasyLoading.show(
+        status: msg,
+        maskType: EasyLoadingMaskType.custom,
+        dismissOnTap: dismissOnTap);
   }
 
   /// 弹窗消失

@@ -5,7 +5,7 @@ import 'package:flutter_app_demo/base/scrollable_widget/listview_separated_page.
 import 'package:flutter_app_demo/base/scrollable_widget/scrollController_page.dart';
 import 'package:flutter_app_demo/base/scrollable_widget/singleChildScrollView_widget.dart';
 import 'package:flutter_app_demo/base/scrollable_widget/staggered_grid_view_page.dart';
-import '../../tabs.dart';
+import 'tabs.dart';
 import 'gridView_page.dart';
 import 'list_card_page.dart';
 import 'list_refreshIndicator_page.dart';
