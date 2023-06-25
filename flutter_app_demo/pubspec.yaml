@@ -42,6 +42,7 @@ dependencies:
       url: 'https://github.com/alibaba/flutter_boost.git'
       ref: '4.0.2'
   go_router: ^7.0.1 # 路由导航
+  rxdart: ^0.27.7
 
 
 
