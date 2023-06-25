@@ -2,6 +2,8 @@ import 'dart:ffi';
 
 import 'package:dio/dio.dart';
 
+import 'my_cache_policy.dart';
+
 /// FileName my_request.dart
 ///
 /// @Author jiangjunhui
@@ -12,27 +14,12 @@ import 'package:dio/dio.dart';
 /// 请求方式
 enum MyRequestMethod { get, post }
 
-/// 缓存策略
-enum MyCachePolicy {
-  /// 不用缓存
-  none,
-
-  /// 先用缓存，在请求网络，得到网络数据后覆盖缓存
-  firstCache,
-
-  /// 先请求网络，失败后再返回缓存
-  firstRequest,
-
-  /// 先用缓存，在请求网络，得到网络数据后覆盖缓存，并且请求数据重新抛出去
-  firstCacheRequest
-}
-
 class MyRequest {
   /// 基础url
   String baseUrl = "https://www.google.com/";
 
   /// 缓存类型
-  MyCachePolicy cache = MyCachePolicy.none;
+  MyDioCachePolicy? cache;
 
   /// 是否弹出错误信息
   bool showErrorLog = true;
