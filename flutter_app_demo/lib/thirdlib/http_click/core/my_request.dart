@@ -2,7 +2,7 @@ import 'dart:ffi';
 
 import 'package:dio/dio.dart';
 
-import 'my_cache_policy.dart';
+import '../my_cache/my_cache_policy.dart';
 
 /// FileName my_request.dart
 ///
@@ -18,8 +18,8 @@ class MyRequest {
   /// 基础url
   String baseUrl = "https://www.google.com/";
 
-  /// 缓存类型
-  MyDioCachePolicy? cache;
+  /// 缓存策略
+  MyDioCachePolicy? cachePolicy;
 
   /// 是否弹出错误信息
   bool showErrorLog = true;
@@ -42,10 +42,9 @@ class MyRequest {
   /// 参数
   Map<String, dynamic>? params;
   MyRequest(
-    this.method,
-    this.urlStr,
-    this.params,
-  );
+      {required this.method,
+      required this.urlStr,
+      Map<String, dynamic>? params});
 
   Options getDioOptions() {
     final options = Options(

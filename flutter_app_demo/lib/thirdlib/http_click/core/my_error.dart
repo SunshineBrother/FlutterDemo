@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-
 import 'my_request.dart';
 
 /// FileName my_error.dart
@@ -8,22 +7,6 @@ import 'my_request.dart';
 /// @Date 2023/6/25 21:25
 ///
 /// @Description TODO
-class MyDioException {
-  /// 响应对应的请求配置。
-  MyRequest? requestOptions;
-
-  /// 错误的请求对应的响应内容。如果请求未完成，响应内容可能为空。
-  Response? response;
-
-  /// 实际错误的内容。
-  Object? error;
-
-  /// 实际错误的堆栈。
-  StackTrace? stackTrace;
-
-  /// 错误信息。
-  String? message;
-}
 
 Map<String, String> _errorCodeMessage = {
   "400": "状态码：400 请求参数错误",
@@ -40,3 +23,20 @@ Map<String, String> _errorCodeMessage = {
   "505": "HTTP 版本不受支持",
   "-1000": "解析不到数据"
 };
+
+class MyDioException {
+  /// 响应对应的请求配置。
+  MyRequest? requestOptions;
+
+  /// 错误的请求对应的响应内容。如果请求未完成，响应内容可能为空。
+  Response? response;
+
+  /// 实际错误的内容。
+  Object? error;
+
+  /// 实际错误的堆栈。
+  StackTrace? stackTrace;
+
+  /// 错误信息。
+  String? message;
+}

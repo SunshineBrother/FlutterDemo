@@ -27,3 +27,12 @@ class MyDio {
     return ob;
   }
 }
+
+class ka {
+  void kkkkk() async {
+    final request = MyRequest(method: MyRequestMethod.get, urlStr: "urlStr");
+    final ob = await MyDio().requestData(request: request);
+    ob.listen((value) {});
+    ob.close();
+  }
+}
