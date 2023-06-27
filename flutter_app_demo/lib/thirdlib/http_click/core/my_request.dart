@@ -2,8 +2,6 @@ import 'dart:ffi';
 
 import 'package:dio/dio.dart';
 
-import '../my_cache/my_cache_policy.dart';
-
 /// FileName my_request.dart
 ///
 /// @Author jiangjunhui
@@ -17,12 +15,6 @@ enum MyRequestMethod { get, post }
 class MyRequest {
   /// 基础url
   String baseUrl = "https://www.google.com/";
-
-  /// 缓存策略
-  MyDioCachePolicy? cachePolicy;
-
-  /// 是否弹出错误信息
-  bool showErrorLog = true;
 
   /// HTTP 请求头。
   Map<String, dynamic>? _headers;

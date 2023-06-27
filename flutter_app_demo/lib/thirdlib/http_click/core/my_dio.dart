@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_app_demo/thirdlib/http_click/core/my_response.dart';
 import 'package:rxdart/rxdart.dart';
+import 'my_dio_configure.dart';
 import 'my_request.dart';
 
 /// FileName my_dio.dart
@@ -16,7 +17,7 @@ final dio = Dio();
 
 class MyDio {
   Future<PublishSubject<MyResopnse>> requestData(
-      {required MyRequest request}) async {
+      {required MyRequest request, MyDioConfigure? configure}) async {
     final path = request.urlStr;
     final params = request.params;
     final options = request.getDioOptions();
